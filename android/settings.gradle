@@ -1,0 +1,3 @@
+include ':flippertabular'
+include ':demo'
+rootProject.name = "Flipper Tabular"

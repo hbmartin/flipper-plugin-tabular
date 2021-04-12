@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Flipper Tabular Demo</string>
+    <string name="send_analytics_data">Send Analytics</string>
+    <string name="send_user_data">Send Users</string>
+</resources>
