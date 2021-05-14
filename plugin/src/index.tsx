@@ -34,7 +34,7 @@ export function plugin(client: PluginClient<Events>) {
               }
             }
           }
-          draft[channel] = props.map(p => ({'title': p, 'dataIndex': p, 'key': p, 'sorter': (a, b) => {
+          draft[channel] = props.map(p => ({'title': p, 'dataIndex': p, 'sorter': (a, b) => {
               if(a[p] > b[p]) return 1;
               if(a[p] < b[p]) return -1;
               return 0;
