@@ -1,8 +1,8 @@
 {
   "$schema": "https://fbflipper.com/schemas/plugin-package/v2.json",
   "name": "flipper-plugin-tabular",
-  "id": "flipper-plugin-tabular",
-  "version": "1.0.3",
+  "id": "tabular",
+  "version": "1.0.4",
   "description": "Easily log tabular to Flipper",
   "pluginType": "client",
   "main": "dist/bundle.js",
@@ -17,12 +17,16 @@
     "email": "harold.martin@gmail.com"
   },
   "scripts": {
-    "prepack": "flipper-pkg lint && flipper-pkg bundle"
+    "lint": "flipper-pkg lint",
+    "prepack": "flipper-pkg lint && flipper-pkg bundle",
+    "build": "flipper-pkg bundle",
+    "watch": "flipper-pkg bundle --watch",
+    "test": "jest --no-watchman"
   },
   "peerDependencies": {
-    "antd": "latest",
     "flipper": "latest",
-    "flipper-plugin": "latest"
+    "flipper-plugin": "latest",
+    "antd": "latest"
   },
   "devDependencies": {
     "@babel/preset-react": "latest",
@@ -33,8 +37,8 @@
     "@types/react-dom": "latest",
     "antd": "latest",
     "flipper": "latest",
-    "flipper-pkg": "latest",
     "flipper-plugin": "latest",
+    "flipper-pkg": "latest",
     "jest": "latest",
     "typescript": "latest"
   }
