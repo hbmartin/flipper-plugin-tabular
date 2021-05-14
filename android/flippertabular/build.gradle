@@ -5,6 +5,8 @@ plugins {
     id 'kotlin-kapt'
     id 'org.jlleitschuh.gradle.ktlint'
     id 'io.gitlab.arturbosch.detekt'
+    id 'maven-publish'
+    id 'signing'
 }
 
 android {
@@ -41,4 +43,4 @@ detekt {
     }
 }
 
-//apply plugin: "com.vanniktech.maven.publish"
+apply plugin: "com.vanniktech.maven.publish"
