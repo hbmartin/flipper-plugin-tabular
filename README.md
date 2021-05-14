@@ -1,11 +1,11 @@
 # Tabular Flipper Plugin
 
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.hbmartin/flipper-plugin-stetho?color=6D3DEE)](https://repo.maven.apache.org/maven2/io/github/hbmartin/flipper-plugin-stetho/)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.hbmartin/flipper-tabular-plugin?color=6D3DEE)](https://repo.maven.apache.org/maven2/io/github/hbmartin/flipper-tabular-plugin/)
 [![reviewdog badge](https://github.com/hbmartin/flipper-plugin-stetho/actions/workflows/reviewdog.yml/badge.svg)](https://github.com/hbmartin/flipper-plugin-stetho/actions/workflows/reviewdog.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/hbmartin/flipper-plugin-stetho/badge)](https://www.codefactor.io/repository/github/hbmartin/flipper-plugin-stetho)
 [![GitHub issues](https://img.shields.io/github/issues/hbmartin/flipper-plugin-stetho)](https://github.com/hbmartin/flipper-plugin-stetho/issues)
 
-Drop in replacement for Stetho to expose dumper plugins in Flipper
+Display tables of data easily in Flipper
 
 ## Download
 
@@ -13,7 +13,7 @@ Install in your build.gradle:
 
 ```
 dependencies {
-  implementation 'io.github.hbmartin:flippertabular:0.1.0'
+  implementation 'io.github.hbmartin:flipper-tabular-plugin:0.1.0
 }
 ```
 
@@ -23,9 +23,10 @@ dependencies {
 Instantiate `StethoFlipperPlugin` with a list of the stetho/dumper plugins to expose. Then add that plugin to Flipper. See the demo app.
 
 ```
-client.addPlugin(StethoFlipperPlugin(listOf(MyDumperPlugin())))
-OR
-client.addPlugin(StethoFlipperPlugin(dumperPluginsProvider.get()))
+val tabularPlugin = TabularFlipperPlugin()
+client.addPlugin(tabularPlugin)
+...
+tabularPlugin.addRecords("channel name", listOf(records map))
 ```
 
 ## Contributing
