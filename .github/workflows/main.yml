@@ -24,10 +24,10 @@ jobs:
         run: yarn install
       - name: Run ESLint
         run: yarn eslint src
-   detekt:
-     runs-on: ubuntu-latest
-     steps:
-       - uses: actions/checkout@v2
-       - name: "detekt"
-         working-directory: android
-         uses: natiginfo/action-detekt-all@1.17.1
+  detekt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: "detekt"
+        working-directory: android
+        uses: natiginfo/action-detekt-all@1.17.1
