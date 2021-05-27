@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.send_user_data).setOnClickListener { sendUserData() }
     }
 
+    @Suppress("MagicNumber")
     private fun sendAnalyticsData() {
         PluginProvider.tabularPlugin.addRecords(
             "analytics",
@@ -32,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
+    @Suppress("MagicNumber")
     private fun sendOtherAnalyticsData() {
         PluginProvider.tabularPlugin.addRecords(
             "analytics",
