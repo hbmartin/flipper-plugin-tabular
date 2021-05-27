@@ -1,9 +1,19 @@
-import {ColumnType} from "antd/es/table";
+import {DataTableColumn} from "flipper-plugin";
 
-export type Records = Record<string, Array<Record<string, any>>>;
+export type Rows = Record<string, Array<Record<string, any>>>;
+
+export type ColumnDefinition = {
+    key: string;
+    title: string;
+    visible: boolean;
+}
 
 export type Events = {
-    addRecords: Records;
+    addRecords: Rows;
+    configureChannels: Record<string, Array<ColumnDefinition>>;
 };
 
-export type Columns = Record<string, Array<ColumnType<any>>>;
+export type ChannelColumns = Array<DataTableColumn>;
+export type AllColumns = Record<string, ChannelColumns>;
+
+export type recordType<Type> = Type extends Record<infer Y, infer X> ? X : never

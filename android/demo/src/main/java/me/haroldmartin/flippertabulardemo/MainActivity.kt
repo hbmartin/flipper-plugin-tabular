@@ -9,6 +9,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         findViewById<Button>(R.id.send_analytics_data).setOnClickListener { sendAnalyticsData() }
+        findViewById<Button>(R.id.send_other_analytics_data).setOnClickListener { sendOtherAnalyticsData() }
         findViewById<Button>(R.id.send_user_data).setOnClickListener { sendUserData() }
     }
 
@@ -26,6 +27,23 @@ class MainActivity : AppCompatActivity() {
                     "ts" to 456,
                     "name" to "sup",
                     "is_good" to false
+                )
+            )
+        )
+    }
+
+    private fun sendOtherAnalyticsData() {
+        PluginProvider.tabularPlugin.addRecords(
+            "analytics",
+            listOf(
+                mapOf(
+                    "some new info" to 8765,
+                    "test" to "do or do not",
+                    "attention" to true,
+                ),
+                mapOf(
+                    "yo" to "dawg",
+                    "!" to "?"
                 )
             )
         )
