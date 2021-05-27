@@ -15,12 +15,19 @@ jobs:
   # This workflow contains a single job called "build"
   eslint:
     runs-on: ubuntu-latest
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    defaults:
+      run:
+        working-directory: scripts
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: Install yarn and run ESLint
-        run: |
-          cd plugin
-          yarn install
-          yarn eslint src
+      - name: Install modules
+        run: yarn install
+      - name: Run ESLint
+        run: yarn eslint src
+   detekt:
+     runs-on: ubuntu-latest
+     steps:
+       - uses: actions/checkout@v2
+       - name: "detekt"
+         working-directory: android
+         uses: natiginfo/action-detekt-all@1.17.1

@@ -1,7 +1,7 @@
 # Tabular Flipper Plugin
 
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.hbmartin/flipper-tabular-plugin?color=6D3DEE)](https://repo.maven.apache.org/maven2/io/github/hbmartin/flipper-tabular-plugin/)
-[![reviewdog badge](https://github.com/hbmartin/flipper-plugin-stetho/actions/workflows/reviewdog.yml/badge.svg)](https://github.com/hbmartin/flipper-plugin-stetho/actions/workflows/reviewdog.yml)
+[![CI](https://github.com/hbmartin/flipper-plugin-tabular/actions/workflows/main.yml/badge.svg)](https://github.com/hbmartin/flipper-plugin-tabular/actions/workflows/main.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/hbmartin/flipper-plugin-stetho/badge)](https://www.codefactor.io/repository/github/hbmartin/flipper-plugin-stetho)
 [![GitHub issues](https://img.shields.io/github/issues/hbmartin/flipper-plugin-stetho)](https://github.com/hbmartin/flipper-plugin-stetho/issues)
 
