@@ -1,4 +1,11 @@
-import React, {createRef} from 'react';
+/**
+ * Copyright (c) 2021 Harold Martin.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+import React from 'react';
 import {Button, Divider, Dropdown, Menu, Space} from 'antd';
 import {DeleteOutlined, DownOutlined, LockOutlined, UnlockOutlined} from '@ant-design/icons';
 import {
@@ -9,7 +16,7 @@ import {
   createDataSource,
   createState,
   usePlugin,
-  useValue, DataTableManager,
+  useValue,
 } from 'flipper-plugin';
 import {AllColumns, ChannelColumns, Events} from './types';
 
@@ -26,7 +33,7 @@ export function plugin(client: PluginClient<Events>) {
     columns.update(draft => {
       for (const [channel, configuration] of Object.entries(newRecords)) {
         draft[channel] = draft[channel] || [];
-        let existingColumns = draft[channel].map(c => c['key']);
+        const existingColumns = draft[channel].map(c => c['key']);
         for (const prop of configuration.columns) {
           if (!existingColumns.includes(prop.key)) {
             existingColumns.push(prop.key);
@@ -48,7 +55,7 @@ export function plugin(client: PluginClient<Events>) {
     columns.update(draft => {
       for (const [channel, newRecordList] of Object.entries(newRecords)) {
         draft[channel] = draft[channel] || [];
-        let existingColumns = draft[channel].map(c => c['key']);
+        const existingColumns = draft[channel].map(c => c['key']);
         for (const item of newRecordList) {
           for (const prop in item) {
             if (!existingColumns.includes(prop)) {
@@ -92,7 +99,7 @@ export function plugin(client: PluginClient<Events>) {
   };
 
   const clearChannelRecords = () => {
-    let id = selectedID.get();
+    const id = selectedID.get();
     records.get()[id].clear();
     currentChannelRecords.get().clear();
   };
@@ -102,7 +109,7 @@ export function plugin(client: PluginClient<Events>) {
   };
 
   columns.subscribe((value: AllColumns, prevValue: AllColumns) => {
-    let id = selectedID.get();
+    const id = selectedID.get();
     if (value[id] != prevValue[id] && !columnLocked.get()) {
       currentChannelColumns.set(value[id]);
     }
@@ -142,14 +149,13 @@ export function Component() {
   const columns = useValue(instance.currentChannelColumns);
   const records = useValue(instance.currentChannelRecords);
   const selectedID = useValue(instance.selectedID);
-
-  let lockIcon = columnLocked ? <LockOutlined/> : <UnlockOutlined />;
+  const lockIcon = columnLocked ? <LockOutlined/> : <UnlockOutlined />;
 
   return (
     <DataTable
       columns={columns}
       dataSource={records}
-      enableAutoScroll={true}
+      enableAutoScroll
       key={columns.length + selectedID}
       extraActions={
         <Space size="small">
