@@ -24,14 +24,21 @@ export function plugin(client: PluginClient<Events>) {
 
   client.onMessage('configureChannels', (newRecords) => {
     columns.update(draft => {
-      for (const [channel, config] of Object.entries(newRecords)) {
+      for (const [channel, configuration] of Object.entries(newRecords)) {
         draft[channel] = draft[channel] || [];
         let existingColumns = draft[channel].map(c => c['key']);
-        for (const column of config) {
-          if (!existingColumns.includes(column.key)) {
-            existingColumns.push(column.key);
-            draft[channel].push(generateColumn(column.title, column.key, column.visible))
+        for (const prop of configuration.columns) {
+          if (!existingColumns.includes(prop.key)) {
+            existingColumns.push(prop.key);
+            draft[channel].push(generateColumn(prop.key, prop.title, prop.visible))
           }
+        }
+      }
+    });
+    channels.update(draft => {
+      for (const channel of Object.keys(newRecords)) {
+        if (!draft.includes(channel)) {
+          draft.push(channel);
         }
       }
     });
@@ -74,8 +81,8 @@ export function plugin(client: PluginClient<Events>) {
     }
   });
 
-  const generateColumn = (title: string, dataIndex: string, visible: boolean = true): DataTableColumn => {
-    return ({'title': title, 'key': dataIndex, 'visible': visible});
+  const generateColumn = (key: string, title: string, visible: boolean = true): DataTableColumn => {
+    return ({'title': title, 'key': key, 'visible': visible});
   };
 
   const setSelection = (info: {key: React.Key}) => {

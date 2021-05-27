@@ -13,18 +13,10 @@ class TabularFlipperPlugin : BufferingFlipperPlugin() {
         send("addRecords", FlipperObject.Builder().put(channel, records.toFlipperArray()).build())
     }
 
-    fun addChannel(channel: String, columns: List<String>, paginationConfig: PaginationConfig? = null) {
-        send("addChannel", FlipperObject.Builder().put(channel, columns.toFlipperArray()).build())
+    fun configureChannel(channel: String, configuration: ChannelConfig) {
+        send("configureChannels", FlipperObject.Builder().put(channel, configuration.toFlipperObject()).build())
     }
 }
 
-@JvmName("toFlipperArrayString")
-private fun Iterable<String>.toFlipperArray(): FlipperArray =
-    fold(FlipperArray.Builder()) { b, string -> b.put(string) }.build()
-
-
 private fun Iterable<Map<String, Any>>.toFlipperArray(): FlipperArray =
     fold(FlipperArray.Builder()) { b, row -> b.put(row.toFlipperObject()) }.build()
-
-private fun Map<String, Any>.toFlipperObject(): FlipperObject =
-    keys.fold(FlipperObject.Builder()) { b, key -> b.put(key, get(key).toString()) }.build()

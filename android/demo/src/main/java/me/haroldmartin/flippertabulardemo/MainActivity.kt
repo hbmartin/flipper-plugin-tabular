@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
                 mapOf(
                     "ts" to 456,
                     "name" to "sup",
-                    "is_good" to false
+                    "is_good" to mapOf("inner" to "nested")
                 )
             )
         )

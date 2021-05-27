@@ -8,12 +8,14 @@ export type ColumnDefinition = {
     visible: boolean;
 }
 
+export type ChannelDefinition = {
+    columns: Array<ColumnDefinition>;
+}
+
 export type Events = {
     addRecords: Rows;
-    configureChannels: Record<string, Array<ColumnDefinition>>;
+    configureChannels: Record<string, ChannelDefinition>;
 };
 
 export type ChannelColumns = Array<DataTableColumn>;
 export type AllColumns = Record<string, ChannelColumns>;
-
-export type recordType<Type> = Type extends Record<infer Y, infer X> ? X : never
