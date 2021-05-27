@@ -1,5 +1,6 @@
 # Tabular Flipper Plugin
 
+[![npm](https://img.shields.io/npm/v/flipper-plugin-tabular?color=%23FEE933)](https://www.npmjs.com/package/flipper-plugin-tabular)
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.hbmartin/flipper-tabular-plugin?color=6D3DEE)](https://repo.maven.apache.org/maven2/io/github/hbmartin/flipper-tabular-plugin/)
 [![CI](https://github.com/hbmartin/flipper-plugin-tabular/actions/workflows/main.yml/badge.svg)](https://github.com/hbmartin/flipper-plugin-tabular/actions/workflows/main.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/hbmartin/flipper-plugin-stetho/badge)](https://www.codefactor.io/repository/github/hbmartin/flipper-plugin-stetho)

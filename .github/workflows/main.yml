@@ -28,6 +28,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: "detekt"
-        working-directory: android
-        uses: natiginfo/action-detekt-all@1.17.1
+      - uses: natiginfo/action-detekt-all@1.17.1
