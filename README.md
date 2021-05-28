@@ -4,6 +4,7 @@
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.hbmartin/flipper-tabular-plugin?color=6D3DEE)](https://repo.maven.apache.org/maven2/io/github/hbmartin/flipper-tabular-plugin/)
 [![CI](https://github.com/hbmartin/flipper-plugin-tabular/actions/workflows/main.yml/badge.svg)](https://github.com/hbmartin/flipper-plugin-tabular/actions/workflows/main.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/hbmartin/flipper-plugin-tabular/badge)](https://www.codefactor.io/repository/github/hbmartin/flipper-plugin-tabular)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=hbmartin_flipper-plugin-tabular&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=hbmartin_flipper-plugin-tabular)
 [![GitHub issues](https://img.shields.io/github/issues/hbmartin/flipper-plugin-stetho)](https://github.com/hbmartin/flipper-plugin-stetho/issues)
 
 Display tables of data easily in Flipper
