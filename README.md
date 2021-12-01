@@ -15,14 +15,22 @@ Install in your build.gradle:
 
 ```
 dependencies {
-  implementation 'io.github.hbmartin:flipper-tabular-plugin:0.1.0
+  debugImplementation 'io.github.hbmartin:flipper-tabular-plugin:0.1.0
+}
+```
+
+If you have version conflicts then exclude them:
+
+```
+dependencies {
+  debugImplementation 'io.github.hbmartin:flipper-tabular-plugin:0.1.0 { exclude group: 'org.jetbrains.kotlin' }
 }
 ```
 
 
 ## Usage
 
-Instantiate `StethoFlipperPlugin` with a list of the stetho/dumper plugins to expose. Then add that plugin to Flipper. See the demo app.
+Instantiate `TabularFlipperPlugin` then add that plugin to Flipper. Use the same plugin instance as a singleton to add records. See examples in the demo app.
 
 ```
 val tabularPlugin = TabularFlipperPlugin()
