@@ -1,7 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     ext.kotlin_version = '1.5.32'
-    ext.flipper_version = '0.122.0'
+    ext.flipper_version = '0.125.0'
     ext.minSdkVersion = 15
     ext.targetSdkVersion = 29
 
