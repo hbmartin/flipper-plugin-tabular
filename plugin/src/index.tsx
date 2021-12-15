@@ -18,14 +18,14 @@ import {
   usePlugin,
   useValue,
 } from 'flipper-plugin';
-import {AllColumns, ChannelColumns, Events} from './types';
+import {AllColumns, ChannelColumns, Events, Rows} from './types';
 
 export function plugin(client: PluginClient<Events>) {
-  const records = createState<Record<string, DataSource>>({}, {});
+  const records = createState<Record<string, DataSource<Rows>>>({}, {});
   const selectedID = createState<string>("", {});
   const columns = createState<AllColumns>({}, {});
   const channels = createState<string[]>([], {});
-  const currentChannelRecords = createState<DataSource>(createDataSource<any>([], {}), {});
+  const currentChannelRecords = createState<DataSource<Rows>>(createDataSource<any>([], {}), {});
   const currentChannelColumns = createState<ChannelColumns>([], {});
   const columnLocked = createState<boolean>(false, {});
 
@@ -69,7 +69,7 @@ export function plugin(client: PluginClient<Events>) {
     records.update(draft => {
       for (const [channel, newRecordList] of Object.entries(newRecords)) {
         if (!draft.hasOwnProperty(channel)) {
-          draft[channel] = createDataSource<any>([], {});
+          draft[channel] = createDataSource<Rows>([], {});
         }
         for (const item of newRecordList) {
           draft[channel].append(item);
@@ -124,7 +124,6 @@ export function plugin(client: PluginClient<Events>) {
   client.addMenuEntry(
       {
         label: 'Clear',
-        topLevelMenu: 'Edit',
         handler: clearChannelRecords,
       }
   );
