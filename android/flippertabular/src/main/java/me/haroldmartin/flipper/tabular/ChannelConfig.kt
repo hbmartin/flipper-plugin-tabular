@@ -11,7 +11,7 @@ import com.facebook.flipper.core.FlipperArray
 import com.facebook.flipper.core.FlipperObject
 import com.facebook.flipper.core.FlipperValue
 
-data class ChannelConfig (
+data class ChannelConfig(
 //    val enableAutoScroll: Boolean = true,
 //    val visibleByDefault: Boolean = true,
     val columns: List<ColumnConfig>
