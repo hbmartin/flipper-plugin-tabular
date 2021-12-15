@@ -6,11 +6,6 @@ buildscript {
     ext.targetSdkVersion = 29
 
     repositories {
-        jcenter {
-            content {
-                includeModule("org.jetbrains.kotlinx", "kotlinx-html-jvm")
-            }
-        }
         google()
         mavenCentral()
         maven {
@@ -19,7 +14,7 @@ buildscript {
     }
 
     dependencies {
-        classpath "com.android.tools.build:gradle:4.2.1"
+        classpath 'com.android.tools.build:gradle:7.0.4'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'com.vanniktech:gradle-maven-publish-plugin:0.15.1'
         classpath 'org.jetbrains.dokka:dokka-gradle-plugin:1.6.0'
