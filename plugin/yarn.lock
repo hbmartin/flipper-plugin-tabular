@@ -501,6 +501,11 @@
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.16.6.tgz#8f194828193e8fa79166f34a4b4e52f3e769a314"
   integrity sha512-Gr86ujcNuPDnNOY8mi383Hvi8IYrJVJYuf3XcuBM/Dgd+bINn/7tHqsj+tKkoreMbmGsFLsltI/JJd8fOFWGDQ==
 
+"@babel/parser@^7.16.6":
+  version "7.16.7"
+  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.16.7.tgz#d372dda9c89fcec340a82630a9f533f2fe15877e"
+  integrity sha512-sR4eaSrnM7BV7QPzGfEX5paG/6wrZM3I0HDzfIAK06ESvo9oy3xBuVBxE3MbQaKNhvg8g/ixjMWo2CGpzpHsDA==
+
 "@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression@^7.16.2":
   version "7.16.2"
   resolved "https://registry.yarnpkg.com/@babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression/-/plugin-bugfix-safari-id-destructuring-collision-in-function-expression-7.16.2.tgz#2977fca9b212db153c195674e57cfab807733183"
@@ -2265,6 +2270,14 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
   integrity sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==
 
+"@types/react-color@^3.0.6":
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/@types/react-color/-/react-color-3.0.6.tgz#602fed023802b2424e7cd6ff3594ccd3d5055f9a"
+  integrity sha512-OzPIO5AyRmLA7PlOyISlgabpYUa3En74LP8mTMa0veCA719SvYQov4WLMsHvCgXP+L+KI9yGhYnqZafVGG0P4w==
+  dependencies:
+    "@types/react" "*"
+    "@types/reactcss" "*"
+
 "@types/react-dom@^17.0.11":
   version "17.0.11"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.11.tgz#e1eadc3c5e86bdb5f7684e00274ae228e7bcc466"
@@ -2280,6 +2293,22 @@
     "@types/prop-types" "*"
     "@types/scheduler" "*"
     csstype "^3.0.2"
+
+"@types/react@17.0.34":
+  version "17.0.34"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.34.tgz#797b66d359b692e3f19991b6b07e4b0c706c0102"
+  integrity sha512-46FEGrMjc2+8XhHXILr+3+/sTe3OfzSPU9YGKILLrUYbQ1CLQC9Daqo1KzENGXAWwrFwiY0l4ZbF20gRvgpWTg==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/reactcss@*":
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/@types/reactcss/-/reactcss-1.2.6.tgz#133c1e7e896f2726370d1d5a26bf06a30a038bcc"
+  integrity sha512-qaIzpCuXNWomGR1Xq8SCFTtF4v8V27Y6f+b9+bzHiv087MylI/nTCqqdChNeWS7tslgROmYB7yeiruWX7WnqNg==
+  dependencies:
+    "@types/react" "*"
 
 "@types/scheduler@*":
   version "0.16.2"
@@ -4219,13 +4248,6 @@ expand-brackets@^2.1.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-expand-tilde@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/expand-tilde/-/expand-tilde-2.0.2.tgz#97e801aa052df02454de46b02bf621642cdc8502"
-  integrity sha1-l+gBqgUt8CRU3kawK/YhZCzchQI=
-  dependencies:
-    homedir-polyfill "^1.0.1"
-
 expect@^27.4.2:
   version "27.4.2"
   resolved "https://registry.yarnpkg.com/expect/-/expect-27.4.2.tgz#4429b0f7e307771d176de9bdf23229b101db6ef6"
@@ -4441,14 +4463,14 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.4.tgz#28d9969ea90661b5134259f312ab6aa7929ac5e2"
   integrity sha512-8/sOawo8tJ4QOBX8YlQBMxL8+RLZfxMQOif9o0KUKTNTjMYElWPE0r/m5VNFxTRd0NSw8qSy8dajrwX4RYI1Hw==
 
-flipper-babel-transformer@0.125.0:
-  version "0.125.0"
-  resolved "https://registry.yarnpkg.com/flipper-babel-transformer/-/flipper-babel-transformer-0.125.0.tgz#08508eea24967b6161a6e1f67a471b138fdd8691"
-  integrity sha512-bq6sic/n2/JugzlG4Yc7NRs2GVcO8JNXLGtUYAi6eKYkjdaBT0ewZbqZBeJX9P4qd2THep2Gh6m9fI0w+4Mvzw==
+flipper-babel-transformer@0.127.0:
+  version "0.127.0"
+  resolved "https://registry.yarnpkg.com/flipper-babel-transformer/-/flipper-babel-transformer-0.127.0.tgz#6f78a9c1948a3e5fc627b6e3550499fa928a67d5"
+  integrity sha512-1/64py2g5s2FfxVV2UevjLNmR30yH58itISu+z0LYG8Wo7S1WCcAaaTfpvBks1X6R+UPz3Ya5G3WDnd6aY4msA==
   dependencies:
     "@babel/core" "^7.16.0"
     "@babel/generator" "^7.16.0"
-    "@babel/parser" "^7.16.3"
+    "@babel/parser" "^7.16.6"
     "@babel/plugin-proposal-class-properties" "^7.14.5"
     "@babel/plugin-proposal-nullish-coalescing-operator" "^7.14.5"
     "@babel/plugin-proposal-object-rest-spread" "^7.15.6"
@@ -4466,28 +4488,28 @@ flipper-babel-transformer@0.125.0:
     fs-extra "^10.0.0"
     tslib "^2.3.1"
 
-flipper-common@0.125.0:
-  version "0.125.0"
-  resolved "https://registry.yarnpkg.com/flipper-common/-/flipper-common-0.125.0.tgz#8530aff9b51183ba9a57d146c39518d4d29107b0"
-  integrity sha512-BOMOu/WQPuJADs7hhCUCosOsOTDVYdefbK8GT2VMx+0egv83n909utySun8iXStvxxsBgBEQSrre8+c+dtH2lw==
+flipper-common@0.127.0:
+  version "0.127.0"
+  resolved "https://registry.yarnpkg.com/flipper-common/-/flipper-common-0.127.0.tgz#d5bbf74801bbf43a7803fdb8e16e8895b498b0ca"
+  integrity sha512-PgQnDZlpIxqOutFc6ozXSpNRT/LzSpkeEf1Ri1T78SUVrXPckw7IrFYG4l3wYnPZW+nJPkhhSlyFh5yHT1pVhQ==
 
-flipper-pkg-lib@0.125.0:
-  version "0.125.0"
-  resolved "https://registry.yarnpkg.com/flipper-pkg-lib/-/flipper-pkg-lib-0.125.0.tgz#69e33f195882268cb44ffe3fb520d2723741b4f0"
-  integrity sha512-lumKazEg64KLaZ3DyCA50n3hgnrEetIzpwfECfLjKLKzPscvph7iNBK8ISeAawSv/G2rX7BypfeVU02nCHXTIw==
+flipper-pkg-lib@0.127.0:
+  version "0.127.0"
+  resolved "https://registry.yarnpkg.com/flipper-pkg-lib/-/flipper-pkg-lib-0.127.0.tgz#3681fca0e96e39bfc3ff4e7b95c79024451b6808"
+  integrity sha512-1vsU9D8KShy2irf+o3+HkxZl+4pXIJMMcDW7h3sepsa5/sI53+lQ7h8xKGxWhvAs8m/jXx/URiaUMCb+5M9tfg==
   dependencies:
-    flipper-babel-transformer "0.125.0"
-    flipper-plugin-lib "0.125.0"
+    flipper-babel-transformer "0.127.0"
+    flipper-plugin-lib "0.127.0"
     fs-extra "^10.0.0"
     metro "^0.66.2"
     metro-cache "^0.66.2"
     metro-minify-terser "^0.66.2"
     npm-packlist "^3.0.0"
 
-flipper-pkg@^0.125.0:
-  version "0.125.0"
-  resolved "https://registry.yarnpkg.com/flipper-pkg/-/flipper-pkg-0.125.0.tgz#9b1b0570dc658054f7ef76995f037685cd5cbba8"
-  integrity sha512-E4vC9tNmg2nZPW2EVyRnlJZ/eLQB/kO+tmev5AXZY2z3C9poX/841Z1wgGrvImXpfE4d0y0vYKvtM4fpdnlXrQ==
+flipper-pkg@^0.127.0:
+  version "0.127.0"
+  resolved "https://registry.yarnpkg.com/flipper-pkg/-/flipper-pkg-0.127.0.tgz#97680341cd70747ae50fbca3f8dd84a246f7af57"
+  integrity sha512-3/+E9NwUquyQF+wqMulOE8aSN0kjF86cXMUeQVLTBuFC/6jM/1/TcC4A3Foiyg+XlW0P8sWOhAT9M2n78wzIzw==
   dependencies:
     "@oclif/command" "^1"
     "@oclif/config" "^1"
@@ -4497,24 +4519,23 @@ flipper-pkg@^0.125.0:
     ajv "^6.12.2"
     ajv-errors "^1.0.1"
     cli-ux "^5.6.3"
-    flipper-pkg-lib "0.125.0"
-    flipper-plugin-lib "0.125.0"
+    flipper-pkg-lib "0.127.0"
+    flipper-plugin-lib "0.127.0"
     fs-extra "^10.0.0"
     inquirer "^8.2.0"
     lodash "^4.17.21"
     recursive-readdir "^2.2.2"
 
-flipper-plugin-lib@0.125.0:
-  version "0.125.0"
-  resolved "https://registry.yarnpkg.com/flipper-plugin-lib/-/flipper-plugin-lib-0.125.0.tgz#b47387d4e20922112f94a7f302c42c326952881d"
-  integrity sha512-9p/m7AGXfymLBlnihBhjtF+r/U5LMSzQD4Id4JVlH60cQOK1cYRmjYauU453se1V8iSnwXgcamhUby1hm6qd0Q==
+flipper-plugin-lib@0.127.0:
+  version "0.127.0"
+  resolved "https://registry.yarnpkg.com/flipper-plugin-lib/-/flipper-plugin-lib-0.127.0.tgz#552e21abef9da877568f8737f4134c4de823d0a0"
+  integrity sha512-BYGOd7zNlwgm2yXW60sN57NeEH9oO2VVwvxmQshKIpniuPJnxRK3iro4wr6kPIbvlpYC3h2WAp3nzE8Z2zRuFw==
   dependencies:
     algoliasearch "^4.11.0"
     decompress "^4.2.1"
     decompress-targz "^4.1.1"
     decompress-unzip "^4.0.1"
-    expand-tilde "^2.0.2"
-    flipper-common "0.125.0"
+    flipper-common "0.127.0"
     fs-extra "^10.0.0"
     live-plugin-manager "^0.17.0"
     npm-api "^1.0.1"
@@ -4523,48 +4544,51 @@ flipper-plugin-lib@0.125.0:
     semver "^7.3.5"
     tmp "^0.2.1"
 
-flipper-plugin@^0.125.0:
-  version "0.125.0"
-  resolved "https://registry.yarnpkg.com/flipper-plugin/-/flipper-plugin-0.125.0.tgz#73b177a5be992e78a7e8ef8ca4565db39cfb82bc"
-  integrity sha512-VYclP7CGEv42a0T2xweCjGu/74tpTjxa99j51nO59UagdsR4m70suNkeZI9dlMFYl89+3dRPlp9acNoWYspOPw==
+flipper-plugin@^0.127.0:
+  version "0.127.0"
+  resolved "https://registry.yarnpkg.com/flipper-plugin/-/flipper-plugin-0.127.0.tgz#c93e0e481164dbf75de94dac978f312a5b5f3201"
+  integrity sha512-pwq+5g/XvVPId6olkNG4ftggRHrE7F056623D6DXz+/ElnXquqaXxvVvy2f86wsnyStfsH6bzDRmLKfvGpHnnQ==
   dependencies:
     "@ant-design/colors" "^6.0.0"
     "@emotion/css" "^11.5.0"
     "@emotion/react" "^11.6.0"
     "@reach/observe-rect" "^1.2.0"
+    "@types/react" "17.0.34"
+    "@types/react-color" "^3.0.6"
+    "@types/react-dom" "^17.0.11"
     eventemitter3 "^4.0.7"
-    flipper-common "0.125.0"
-    immer "^9.0.6"
+    flipper-common "0.127.0"
+    immer "^9.0.7"
     js-base64 "^3.7.2"
     lodash "^4.17.21"
     react-color "^2.19.3"
     react-element-to-jsx-string "^14.3.4"
-    react-virtual "^2.8.2"
+    react-virtual "^2.10.0"
     string-natural-compare "^3.0.0"
     uuid "^8.3.2"
 
-flipper-server-core@0.0.0, flipper-server-core@0.125.0:
+flipper-server-core@0.0.0, flipper-server-core@0.127.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/flipper-server-core/-/flipper-server-core-0.0.0.tgz#5865c15388be06f30f408ea97e25ea2237036bdc"
   integrity sha512-Tvxum1d4sDpw2Midzxx2nCNm7GxDB5SUKtjZppD2V5yVCQrggWo9o+vfpRsfb30222kQhhmI2TowGUcb6pMRaA==
 
-flipper-ui-core@0.0.0, flipper-ui-core@0.125.0:
+flipper-ui-core@0.0.0, flipper-ui-core@0.127.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/flipper-ui-core/-/flipper-ui-core-0.0.0.tgz#c4c6180fa040a86f12ebb1936238cef7f1c2044a"
   integrity sha512-Ho3cgqedeLIBCxogH/mWg21DiyFepU/hUzj8U4prGTQ169dcgoHJxFD/cLLf7sQUsFhSmk2XB/mIlh+td6YqPA==
 
-flipper@^0.125.0:
-  version "0.125.0"
-  resolved "https://registry.yarnpkg.com/flipper/-/flipper-0.125.0.tgz#74c77c2acfe8c0ebc708813e8b94037d452bed21"
-  integrity sha512-if6J/dAQLTiRnZkhlcXv7mTBlEqfeBR+QdBWuFdBKJgmGi7DPd44qFw13oNQl8HRR1hMZUSwjDzhhe6vwLaAHQ==
+flipper@^0.127.0:
+  version "0.127.0"
+  resolved "https://registry.yarnpkg.com/flipper/-/flipper-0.127.0.tgz#5e875eaf3aabeb342efd04fd3ee7a6eba1ae71b3"
+  integrity sha512-/X2w6NioDEd5arGpTCpeS9JDZVhfc2q9zuvZnCe/QDq9aDiapyRrqHGvfxXu3uMtnuv0nYOYtG6LN8tNpa54ew==
   dependencies:
-    flipper-common "0.125.0"
-    flipper-server-core "0.125.0"
-    flipper-ui-core "0.125.0"
+    flipper-common "0.127.0"
+    flipper-server-core "0.127.0"
+    flipper-ui-core "0.127.0"
     fs-extra "^10.0.0"
     invariant "^2.2.2"
     metro-runtime "^0.66.2"
-    pretty-format "^27.3.1"
+    pretty-format "^27.4.2"
 
 follow-redirects@^1.14.0:
   version "1.14.5"
@@ -4850,13 +4874,6 @@ hoist-non-react-statics@^3.3.1:
   dependencies:
     react-is "^16.7.0"
 
-homedir-polyfill@^1.0.1:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/homedir-polyfill/-/homedir-polyfill-1.0.3.tgz#743298cef4e5af3e194161fbadcc2151d3a058e8"
-  integrity sha512-eSmmWE5bZTK2Nou4g0AI3zZ9rswp7GRKoKXS1BLUkvPviOqs4YTN1djQIqrXy9k5gEtdLPy86JjRwsNM9tnDcA==
-  dependencies:
-    parse-passwd "^1.0.0"
-
 html-encoding-sniffer@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/html-encoding-sniffer/-/html-encoding-sniffer-2.0.1.tgz#42a6dc4fd33f00281176e8b23759ca4e4fa185f3"
@@ -4942,7 +4959,7 @@ image-size@^0.6.0:
   resolved "https://registry.yarnpkg.com/image-size/-/image-size-0.6.3.tgz#e7e5c65bb534bd7cdcedd6cb5166272a85f75fb2"
   integrity sha512-47xSUiQioGaB96nqtp5/q55m0aBQSQdyIloMOc/x+QVTDZLNmXE892IIDrJ0hM1A5vcNUDD5tDffkSP5lCaIIA==
 
-immer@^9.0.6:
+immer@^9.0.7:
   version "9.0.7"
   resolved "https://registry.yarnpkg.com/immer/-/immer-9.0.7.tgz#b6156bd7db55db7abc73fd2fdadf4e579a701075"
   integrity sha512-KGllzpbamZDvOIxnmJ0jI840g7Oikx58lBPWV0hUh7dtAyZpFqqrBZdKka5GlTwMTZ1Tjc/bKKW4VSFAt6BqMA==
@@ -7034,11 +7051,6 @@ parse-json@^5.0.0:
     json-parse-even-better-errors "^2.3.0"
     lines-and-columns "^1.1.6"
 
-parse-passwd@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/parse-passwd/-/parse-passwd-1.0.0.tgz#6d5b934a456993b23d37f40a382d6f1666a8e5c6"
-  integrity sha1-bVuTSkVpk7I9N/QKOC1vFmao5cY=
-
 parse5@6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-6.0.1.tgz#e1a1c085c569b3dc08321184f19a39cc27f7c30b"
@@ -7204,7 +7216,7 @@ pretty-format@^26.6.2:
     ansi-styles "^4.0.0"
     react-is "^17.0.1"
 
-pretty-format@^27.0.0, pretty-format@^27.0.2, pretty-format@^27.3.1, pretty-format@^27.4.2:
+pretty-format@^27.0.0, pretty-format@^27.0.2, pretty-format@^27.4.2:
   version "27.4.2"
   resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-27.4.2.tgz#e4ce92ad66c3888423d332b40477c87d1dac1fb8"
   integrity sha512-p0wNtJ9oLuvgOQDEIZ9zQjZffK7KtyR6Si0jnXULIDwrlNF8Cuir3AZP0hHv0jmKuNN/edOnbMjnzd4uTcmWiw==
@@ -7646,10 +7658,10 @@ react-refresh@^0.4.0:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.4.3.tgz#966f1750c191672e76e16c2efa569150cc73ab53"
   integrity sha512-Hwln1VNuGl/6bVwnd0Xdn1e84gT/8T9aYNL+HAKDArLCS7LWjwr7StE30IEYbIkx0Vi3vs+coQxe+SQDbGbbpA==
 
-react-virtual@^2.8.2:
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/react-virtual/-/react-virtual-2.9.0.tgz#156a158fa02800da685becef848358cba0a00b11"
-  integrity sha512-UbLBfcWiqiGKzSJS6CrF80KwIOBJ1pVCqot5eySCJkRm2/PhJv46ltfRdtOdrIyENe/K1LvjTcNrMq6k+dBYtw==
+react-virtual@^2.10.0:
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/react-virtual/-/react-virtual-2.10.0.tgz#110cc0f48bb6edffd253f532123a074e6bbec4cb"
+  integrity sha512-Mgy//1Ty0YMcELTooFq5mMrEb4dLRzS9PbPrgDbpdgGRgG9RuQrXBxgPCm1vNBonoiNZjbsGSEPLuJ7MuHLvLg==
   dependencies:
     "@reach/observe-rect" "^1.1.0"
 
