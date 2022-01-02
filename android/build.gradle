@@ -18,13 +18,13 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'com.vanniktech:gradle-maven-publish-plugin:0.15.1'
         classpath 'org.jetbrains.dokka:dokka-gradle-plugin:1.6.0'
-        classpath 'com.github.ben-manes:gradle-versions-plugin:0.39.0'
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.40.0'
     }
 }
 
 plugins {
-    id 'com.github.ben-manes.versions' version '0.39.0'
-    id 'org.jlleitschuh.gradle.ktlint' version '10.2.0'
+    id 'com.github.ben-manes.versions' version '0.40.0'
+    id 'org.jlleitschuh.gradle.ktlint' version '10.2.1'
     id 'io.gitlab.arturbosch.detekt' version '1.19.0'
 }
 
