@@ -23,7 +23,7 @@ If you have version conflicts then exclude them:
 
 ```
 dependencies {
-  debugImplementation 'io.github.hbmartin:flipper-tabular-plugin:0.1.0 { exclude group: 'org.jetbrains.kotlin' }
+  debugImplementation ('io.github.hbmartin:flipper-tabular-plugin:0.1.0') { exclude group: 'org.jetbrains.kotlin' }
 }
 ```
 
@@ -36,7 +36,8 @@ Instantiate `TabularFlipperPlugin` then add that plugin to Flipper. Use the same
 val tabularPlugin = TabularFlipperPlugin()
 client.addPlugin(tabularPlugin)
 ...
-tabularPlugin.addRecords("channel name", listOf(records map))
+tabularPlugin.addRecord("channel name", mapOf<String, Any>(...))
+tabularPlugin.addRecords("channel name", listOf(mapOf<String, Any>(...)))
 ```
 
 ## Contributing
