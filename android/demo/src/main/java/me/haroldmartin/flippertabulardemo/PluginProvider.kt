@@ -9,7 +9,7 @@ object PluginProvider {
         configureChannel(
             channel = "analytics",
             configuration = ChannelConfig(
-                columns = listOf(ColumnConfig(key = "is_good", title="Configured Title"))
+                columns = listOf(ColumnConfig(key = "is_good", title = "Configured Title"))
             )
         )
     }
